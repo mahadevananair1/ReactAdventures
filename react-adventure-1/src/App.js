@@ -2,6 +2,14 @@ import NewExpense from "./components/ExpenseInput/NewExpense";
 import ExpenseItemGroup from "./components/ExpenseTiles/ExpenseItemGroup";
 function App() {
 
+
+  const addExpenseHandler = (expense) => {
+    const expenseData= {
+      ...expense,
+    }
+    console.log(expenseData);
+  } 
+
   const expenses = [
     {
       id: 'e1',
@@ -28,7 +36,8 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
       <p>guns and bangs</p>
-      <NewExpense/>
+      
+      <NewExpense addExpenseHandler ={addExpenseHandler} />
       {/* Yeah a self closing tag is enough */}
       <ExpenseItemGroup expenses = {expenses}/>
     </div>
