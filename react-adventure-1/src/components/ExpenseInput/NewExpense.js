@@ -9,11 +9,9 @@ const NewExpense = (props) => {
             ...enteredExpenseData,
             id: Math.random().toString(),
         }
-        // console.log(expenseData);
-        props.addExpenseHandler(expenseData);
+        console.log(expenseData);
+        props.addExpenseData(expenseData);
     }
-
-   
 
     return (
         <div className='new-expense'>
