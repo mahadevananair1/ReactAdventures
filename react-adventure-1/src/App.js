@@ -1,4 +1,5 @@
-import ExpenseItemGroup from "./components/ExpenseItemGroup";
+import NewExpense from "./components/ExpenseInput/NewExpense";
+import ExpenseItemGroup from "./components/ExpenseTiles/ExpenseItemGroup";
 function App() {
 
   const expenses = [
@@ -27,7 +28,7 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
       <p>guns and bangs</p>
-
+      <NewExpense/>
       {/* Yeah a self closing tag is enough */}
       <ExpenseItemGroup expenses = {expenses}/>
     </div>
