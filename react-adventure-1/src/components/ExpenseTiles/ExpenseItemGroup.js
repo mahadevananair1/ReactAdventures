@@ -12,12 +12,16 @@ function ExpenseItemGroup(props) {
     setYear(selectedYear)
   }
 
+  // const yearFilter = (filteredYear) => {
+  //   return filteredYear;
+  // }
+
   return (
     
     <div className="expenses">
     <ExpensesFilter selected={filteredYear} ChangeDate = {expensesFilterDateHandler}/>
       
-      {props.expenses.map((expense) => (<ExpenseItem key={expense.id} title = {expense.title} amount={expense.amount} date={expense.date}/> ))}
+      {props.expenses.filter((expense) => (expense.date.getFullYear().toString() === filteredYear)).map((expense) => (<ExpenseItem key={expense.id} title = {expense.title} amount={expense.amount} date={expense.date}/> ))}
       {/* <ExpenseItem
         title={props.expenses[0].title}
         amount={props.expenses[0].amount}
