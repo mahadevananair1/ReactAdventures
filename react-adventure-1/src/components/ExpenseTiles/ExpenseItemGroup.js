@@ -14,17 +14,24 @@ function ExpenseItemGroup(props) {
 
 const filteredExpenses = props.expenses.filter((expense) => expense.date.getFullYear().toString() === filteredYear)
 
+let expenseContent = <p>No items to showcase in this year</p>;
+
+if (filteredExpenses.length > 0) {
+  expenseContent = filteredExpenses.map((expense) => (<ExpenseItem key={expense.id} title = {expense.title} amount={expense.amount} date={expense.date}/>))
+}
+
   return (
     
     <div className="expenses">
     <ExpensesFilter selected={filteredYear} ChangeDate = {expensesFilterDateHandler}/>
       
-      {filteredExpenses.length === 0 && <p>No items to showcase in this year</p>}
+      {/* {filteredExpenses.length === 0 && <p>No items to showcase in this year</p>}
 
       { 
         filteredExpenses.length > 0 && filteredExpenses.map((expense) => (<ExpenseItem key={expense.id} title = {expense.title} amount={expense.amount} date={expense.date}/> )) 
-      }
+      } */}
 
+      {expenseContent}
 
      
     </div>
