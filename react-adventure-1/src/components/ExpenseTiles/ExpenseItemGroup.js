@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import ExpensesFilter from "../ExpenseGraph/ExpensesFilter";
-import ExpenseItem from "./ExpenseItem";
+import ExpensesList from "./ExpensesList";
 import './ExpenseItemGroup.css';
 
 // Self closing tags are good in case of readability Hence I switched
@@ -14,11 +14,9 @@ function ExpenseItemGroup(props) {
 
 const filteredExpenses = props.expenses.filter((expense) => expense.date.getFullYear().toString() === filteredYear)
 
-let expenseContent = <p>No items to showcase in this year</p>;
 
-if (filteredExpenses.length > 0) {
-  expenseContent = filteredExpenses.map((expense) => (<ExpenseItem key={expense.id} title = {expense.title} amount={expense.amount} date={expense.date}/>))
-}
+
+
 
   return (
     
@@ -31,7 +29,7 @@ if (filteredExpenses.length > 0) {
         filteredExpenses.length > 0 && filteredExpenses.map((expense) => (<ExpenseItem key={expense.id} title = {expense.title} amount={expense.amount} date={expense.date}/> )) 
       } */}
 
-      {expenseContent}
+      <ExpensesList expenses = {filteredExpenses}/>
 
      
     </div>
