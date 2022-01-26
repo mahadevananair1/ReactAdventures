@@ -20,7 +20,7 @@ const filteredExpenses = props.expenses.filter((expense) => expense.date.getFull
 
   return (
     
-    <div className="expenses">
+    <li className="expenses">
     <ExpensesFilter selected={filteredYear} ChangeDate = {expensesFilterDateHandler}/>
       
       {/* {filteredExpenses.length === 0 && <p>No items to showcase in this year</p>}
@@ -32,7 +32,7 @@ const filteredExpenses = props.expenses.filter((expense) => expense.date.getFull
       <ExpensesList expenses = {filteredExpenses}/>
 
      
-    </div>
+    </li>
   );
 }
 
