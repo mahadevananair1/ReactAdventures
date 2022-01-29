@@ -50,10 +50,9 @@ function App() {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <p>guns and bangs</p>
       
-      <NewExpense addExpenseData = {addExpenseDataHandler} />
+      
+      <NewExpense addExpenseData = {addExpenseDataHandler}/>
       {/* Yeah a self closing tag is enough */}
       <ExpenseItemGroup expenses = {expenses}/>
     </div>
