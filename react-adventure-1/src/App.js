@@ -15,13 +15,31 @@ const DummyExpenses = [
     id: 'e3',
     title: 'Car Insurance',
     amount: 294.67,
-    date: new Date(2021, 2, 28),
+    date: new Date(2022, 2, 28),
   },
   {
     id: 'e4',
+    title: 'ipad',
+    amount: 604.67,
+    date: new Date(2022, 4, 14),
+  },
+  {
+    id: 'e5',
     title: 'New Desk (Wooden)',
     amount: 450,
     date: new Date(2021, 5, 12),
+  },
+  {
+    id: 'e6',
+    title: 'New Computer',
+    amount: 480,
+    date: new Date(2021, 8, 2),
+  },
+  {
+    id: 'e7',
+    title: 'New Stove',
+    amount: 180,
+    date: new Date(2022, 9, 18),
   },
 ];
 
