@@ -21,6 +21,12 @@
     max-width: 100%;
   }
   
-  .new-expense__actions {
+  .new-expense__actions_submit {
     text-align: right;
+  }
+ 
+  .new_item_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }

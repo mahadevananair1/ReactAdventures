@@ -48,7 +48,7 @@ const ExpenseForm = (props) => {
     };
 
     const triggerChangeHandler = (event) => {
-        setTriggerVal(event.target.value);
+        setTriggerVal("0");
         event.preventDefault();
         console.log("triggerChangeHandler is activated");
         // setUserInput({
@@ -95,31 +95,29 @@ const ExpenseForm = (props) => {
         <form onSubmit={submitHandler} >
         <div className='new-expense__controls'>
             <div className='new-expense__control'>
-                <label>{enteredTitle}</label>
+                <label>Title</label>
                 <input type='text' value={enteredTitle} onChange={titleChangeHandler}></input>
             </div>
             <div className='new-expense__control'>
-                <label>{enteredAmount}</label>
+                <label>Amount</label>
                 <input type='number' min="0.01" step="0.01" value={enteredAmount} onChange={amountChangeHandler} ></input>
             </div>
             <div className='new-expense__control'>
-                <label>{enteredDate}</label>
+                <label>Date</label>
                 <input type='date' min="2019-02-01" max='2022-12-31' value={enteredDate} onChange={dateChangeHandler} ></input>
             </div>
         </div>
-        <div className='new-expense__actions'>
+        <div className='new-expense__actions_submit'>
+            <button type='submit'  onChange = {triggerChangeHandler}>Cancel</button>
             <button type='submit'>Add Expense</button>
-        </div>
-        <div className='new-expense__actions'>
-            <button type='submit' value = "0" onChange = {triggerChangeHandler}>Cancel</button>
         </div>
     </form>
         )
     } else 
     return (
         <form onSubmit = {triggerHandler}>
-        <div className='new-expense__actions'>
-            <button type='submit' value = "1" onChange = {triggerChangeHandler}>New Item!</button>
+        <div className='className="new_item_button"'>
+            <button type='submit'  onChange = {triggerChangeHandler} >New Item!</button>
         </div>
     </form>
         
